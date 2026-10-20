@@ -1,6 +1,5 @@
 DevTools
 
-
 url_Completa: http://127.0.0.1:5500/index.html
 protocolo: http://
 host: 127.0.0.1
@@ -9,23 +8,32 @@ ruta: /index.html
 metodo_Peticion: Get
 codigo_Estado: 304
 
+-----
 Ruta que no existe 
-
 ruta: /promociones.html
 error: 404 Not Found -> Significa que no se encotro el archivo dentro del servidor
-
+-----
 Roles que cumpliran el HTML, CSS y JavaScript
-
-
 HTML: Este cumplira el rol de crear la estructura de la pagina web. Hacer un boton
-
-
 CSS: Es el que dara el estilo al html dara color a cada palabra y ajuste visual que tenga este. Darle color a un boton
-
-
 JavaScript: Nos ayudara a dar animacion, y crear funcionalidades que va a tener la pagina de Rueda Libre. Al darle clic al boton se habre un menu 
 
 
 
+TABLA DE RUTAS
 
+| Archivo de origen |         Destino            | Ruta escrita |
+|-------------------|----------------------------|----------------------------------------------------|
+| `index.html`      | `index.html`               | `index.html` |
+| `index.html`      | `paginas/tarifas.html`     | `paginas/tarifas.html` |
+| `index.html`      | `paginas/reservas.html`    | `paginas/reservas.html` |
+| `index.html`      | Sección "Encuéntranos"     | `#encuentranos` |
+| `index.html`      | Recorridos guiados en `paginas/tarifas.html` | `paginas/tarifas.html#tarifasRecorridosGuiados` |
+| `paginas/tarifas.html` | `index.html` | `../index.html` |
+| `paginas/tarifas.html` | `paginas/reservas.html` | `reservas.html` |
+| `paginas/reservas.html` | `index.html` | `../index.html` |
+| `paginas/reservas.html` | `paginas/tarifas.html` | `tarifas.html` |
 
+Las rutas de archivos de la tabla coinciden con la estructura real del proyecto:
+`index.html` está en la raíz y `tarifas.html` y `reservas.html` están dentro de
+`paginas/`.
