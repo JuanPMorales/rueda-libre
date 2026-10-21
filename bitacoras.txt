@@ -121,3 +121,12 @@ Fecha: 2026-10-20
         ├── Correo electrónico
         └── Copyright
 ```
+
+
+--------
+
+Justificacion del porque se utilizo:
+
+- select: Utilizamos el select con <option> para crear una lista desplegable para mostrar las bicicletas
+- textarea: Lo utilizamos para que el usuario pueda agregar un comentario de texto largo y no se quede corto a la hora de redactarlo
+-input type="email: utilice el input tipo email para que se valide que el correo que se va a enviar tenga el simbolo @, y que en movil saque un teclado optimo con @ y . 
