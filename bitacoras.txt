@@ -130,3 +130,183 @@ Justificacion del porque se utilizo:
 - select: Utilizamos el select con <option> para crear una lista desplegable para mostrar las bicicletas
 - textarea: Lo utilizamos para que el usuario pueda agregar un comentario de texto largo y no se quede corto a la hora de redactarlo
 -input type="email: utilice el input tipo email para que se valide que el correo que se va a enviar tenga el simbolo @, y que en movil saque un teclado optimo con @ y . 
+
+
+----------------
+
+BITACORA DE PRUEBAS - FORMULARIO DE RESERVA DE BICICLETAS
+
+Objetivo:
+Verificar las validaciones del formulario de reserva de bicicletas
+mediante el ingreso de datos incorrectos y registrar los resultados
+obtenidos durante las pruebas.
+
+---------------------------------------------------------------
+TABLA DE PRUEBAS
+---------------------------------------------------------------
+
+PRUEBA 1
+Campo: Nombre completo
+Dato de prueba: sd a
+Regla: Minimo 3 caracteres.
+Resultado esperado: El formulario debe rechazar nombres que no
+cumplan con la longitud minima establecida.
+Resultado obtenido: El formulario mostro un error durante la prueba.
+Estado: APROBADA.
+
+---------------------------------------------------------------
+
+PRUEBA 2
+Campo: Numero de documento
+Dato de prueba: adsa10225
+Regla: Obligatorio, solo numeros y entre 6 y 10 digitos.
+Resultado esperado: El formulario debe rechazar el documento
+porque contiene letras.
+Resultado obtenido: El formulario mostro un error.
+Estado: APROBADA.
+
+---------------------------------------------------------------
+
+PRUEBA 3
+Campo: Correo electronico
+Dato de prueba: asdasd.com
+Regla: Campo obligatorio y formato de correo valido.
+Resultado esperado: El formulario debe rechazar el correo
+porque no contiene el simbolo @.
+Resultado obtenido: La validacion fue exitosa y no en vio el formulario.
+Estado: APROBADA.
+
+---------------------------------------------------------------
+
+PRUEBA 4
+Campo: Correo electronico
+Dato de prueba: asdasd@gmial.c
+Regla: El correo debe tener un formato valido y una extension
+de al menos dos letras.
+Resultado esperado: El formulario debe impedir el envio
+Resultado obtenido: El formulario sigue permitiendo continuar
+sin mostrar el error esperado.
+Observacion: Se modifico el atributo pattern, pero el problema
+continua sin resolverse.
+Estado: FALLIDA.
+
+---------------------------------------------------------------
+
+PRUEBA 5
+Campo: Celular
+Dato de prueba: 4138854777
+Regla: Obligatorio, 10 digitos y debe comenzar por 3.
+Resultado esperado: El formulario debe rechazar el numero
+porque comienza por 4.
+Resultado obtenido: Se identifico que el patron original
+no funcionaba como se esperaba.
+Correccion realizada:
+pattern="3[0-9]{9}"
+Estado: CORREGIDA - APROBADA.
+
+---------------------------------------------------------------
+
+PRUEBA 6
+Campo: Celular
+Dato de prueba: 3138854777
+Regla: Debe contener 10 digitos y comenzar por 3.
+Resultado esperado: El formulario debe aceptar el numero
+porque cumple con el patron establecido.
+Resultado obtenido: Se modifico el patron para permitir
+10 digitos que comiencen por 3.
+Estado: APROBADA.
+
+---------------------------------------------------------------
+
+PRUEBA 7
+Campo: Fecha de alquiler
+Dato de prueba: Fecha dentro del rango permitido.
+Regla: Fecha obligatoria entre el 1 de noviembre y el
+31 de diciembre de 2026.
+Resultado esperado: El formulario debe aceptar las fechas
+dentro del rango y rechazar las fechas fuera de el.
+Resultado obtenido: Se reporto que la prueba paso.
+Estado: APROBADA.
+
+---------------------------------------------------------------
+
+PRUEBA 8
+Campo: Tipo de bicicleta
+Dato de prueba: Seleccionar una opcion disponible.
+Regla: Seleccion obligatoria.
+Resultado esperado: El formulario debe exigir la seleccion
+de un tipo de bicicleta.
+Resultado obtenido: Se reporto que la prueba paso.
+Estado: APROBADA.
+
+---------------------------------------------------------------
+
+PRUEBA 9
+Campo: Plan de alquiler
+Dato de prueba: Seleccionar una opcion disponible.
+Regla: Seleccion obligatoria.
+Resultado esperado: El formulario debe exigir la seleccion
+de un plan de alquiler.
+Resultado obtenido: Se reporto que la prueba paso.
+Estado: APROBADA.
+
+---------------------------------------------------------------
+
+PRUEBA 10
+Campo: Cantidad de bicicletas
+Dato de prueba: 8
+Regla: Cantidad obligatoria entre 1 y 6 bicicletas.
+Resultado esperado: El formulario debe rechazar el valor 8
+porque supera la cantidad maxima permitida.
+Resultado obtenido: El formulario mostro un error.
+Estado: APROBADA.
+
+---------------------------------------------------------------
+
+PRUEBA 11
+Campo: Comentarios
+Dato de prueba: Texto de 301 caracteres.
+Regla: Campo opcional con un maximo de 300 caracteres.
+Resultado esperado: El campo no debe permitir introducir
+mas de 300 caracteres.
+Resultado obtenido: El campo permitio introducir solamente
+300 caracteres.
+Estado: APROBADA.
+
+---------------------------------------------------------------
+
+PRUEBA 12
+Campo: Politicas de alquiler
+Dato de prueba: Casilla sin marcar.
+Regla: La aceptacion de las politicas de alquiler es obligatoria.
+Resultado esperado: El formulario debe impedir el envio
+cuando la casilla no esta marcada.
+Resultado obtenido: El formulario rechazo el envio sin marcar las opciones.
+Estado: APROBADA.
+
+---------------------------------------------------------------
+CONCLUSION
+---------------------------------------------------------------
+
+Durante las pruebas realizadas se verificaron diferentes
+validaciones del formulario de reserva de bicicletas.
+
+Se identificaron problemas en la validacion del correo
+electronico, especialmente al ingresar el dato
+"asdasd@gmial.c".
+
+Aunque se modifico el atributo pattern del campo de correo,
+el problema continua presentandose. Por este motivo, la prueba
+se registra como FALLIDA y queda pendiente de solucion.
+
+Tambien se identifico la necesidad de ajustar el patron del
+celular para exigir 10 digitos que comiencen por 3.
+
+La cantidad de bicicletas y la longitud maxima de los
+comentarios se comportaron segun lo esperado durante las
+pruebas reportadas.
+
+Nota:
+Los resultados registrados corresponden a las pruebas
+reportadas. Las pruebas marcadas como corregidas deben
+ejecutarse nuevamente para confirmar su funcionamiento.

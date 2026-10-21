@@ -47,16 +47,15 @@
                     <legend>Tus Datos</legend>
                     <p>
                         <label for="nombreCompleto">Nombre Completo</label>
-                        <input type="text" id="nombreCompleto" name="Nombre Completo" required minlength="4">
+                        <input type="text" id="nombreCompleto" name="NombreCompleto" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{3,}(?:\s+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,})+$" title="Por favor, introduce tu nombre y al menos un apellido (solo letras y espacios)." placeholder="Pepito Perez" minlength="3" required>
                     </p>
                     <p>
                         <label for="numeroDocumento">Numero Documento</label>
                         <select name="tipDocumento" id="tipDocumento" required>
                             <option value="CC">Cédula</option>
                             <option value="TI">Tarjeta Identidad</option>
-                            <option value="PA">Pasaporte</option>
                         </select>
-                        <input type="number" id="numeroDocumento" name="numDocumento" required min="0">
+                        <input type="number" id="numeroDocumento" name="numDocumento" minlength="6" required>
                     </p>
                     <p>
                         <label for="correo">Correo Electrónico</label>
@@ -64,14 +63,14 @@
                     </p>
                     <p>
                         <label for="celular">Celular</label>
-                        <input type="tel" id="celular" name="numCelular" pattern="[0-9]{10}" title="Escribe 10 numeros sin espacio" required>
+                        <input type="tel" id="celular" name="numCelular" pattern="^3[0-9]{9}" title="Escribe 10 numeros sin espacio y que comience en 3" required>
                     </p>
                 </fieldset>
                 <fieldset>
                     <legend>Tu alquiler</legend>
                     <p>
                         <label for="fechaAlquiler">Fecha Alquiler</label>
-                        <input type="date" name="fechaAlquiler" id="fechaAlquiler" required min="2026-10-01" max="2026-12-31">
+                        <input type="date" name="fechaAlquiler" id="fechaAlquiler" min="2026-10-01" max="2026-12-31" required>
                     </p>
                     <p>
                         <label for="tipoBicicleta">Tipo Bicicletas</label>
@@ -93,7 +92,7 @@
                     </p>
                     <p>
                         <label for="cantidadBicicletas">Cantidad de bicicletas</label>
-                        <input type="number" name="numBicicletas" id="cantidadBicicletas" min="0" max="6">
+                        <input type="number" name="numBicicletas" id="cantidadBicicletas" min="1" max="6">
                     </p>
                     <p>
                         <label for="recorrdoGuiado">Recorrido Guiados</label>
@@ -118,19 +117,12 @@
                     </p>
                     <p>
                         <label for="sectComentarios">Comentarios</label>
-                        <textarea name="comentario" id="sectComentarios" placeholder="¿Algun comentario?"></textarea>
+                        <textarea name="comentario" id="sectComentarios" placeholder="¿Algun comentario?" maxlength="300"></textarea>
                     </p>
                 </fieldset>
-                <p><button type="submit" onclick="console.log('Enviado'); return false;">Enviar</button></p>
+                <p><button type="submit">Enviar</button></p>
             </form>
         </section>
-
-
-
-
-
-
-
     </main>
 
     <footer>
