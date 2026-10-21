@@ -44,39 +44,80 @@ Las rutas de archivos de la tabla coinciden con la estructura real del proyecto:
 ESQUEMA DE REGIONES SEMÁNTICAS
 Fecha: 2026-10-20
 
-index.html
-└── <header>
-    ├── Imagen de portada y presentación
-    └── <nav id="menu"> enlaces: Inicio, Tarifas y rutas, Reservas
-    <main>
-    ├── <section> bienvenida y accesos principales
-    ├── <section> ¿Quiénes somos?
-    ├── <section> Nuestros servicios
-    │   └── <article> cada servicio de bicicletas, licras, jerseys y zapatillas
-    ├── <section> ¿Cómo alquilar?
-    └── <section id="encuentranos"> ubicación, redes y contacto
-        └── <aside> información complementaria de contacto y ubicación
-    <footer> nombre de Rueda Libre, correo y copyright
+``` 1. `index.html`
+<html lang="es">
+└── <body>
+    ├── <header>
+    │   ├── <img> Imagen de portada
+    │   ├── <h1> Nombre del negocio: Rueda Libre
+    │   └── <nav id="menuPrincipal">
+    │       └── Menú principal: Inicio, Tarifas y rutas, Reservas
+    │
+    ├── <main>
+    │   ├── Bienvenida
+    │   ├── <section> ¿Quiénes somos?
+    │   ├── <section> Nuestros servicios
+    │   │   └── <article> Servicios ofrecidos
+    │   │       ├── Alquiler de bicicletas
+    │   │       ├── Licras
+    │   │       ├── Jerseys
+    │   │       ├── Zapatillas de ciclismo
+    │   │       └── Recorridos guiados
+    │   ├── <section> ¿Cómo alquilar?
+    │   └── <section id="encuentranos"> Encuéntranos
+    │       └── <aside> Información complementaria de ubicación y redes
+    │
+    └── <footer>
+        ├── Nombre del negocio
+        ├── Correo electrónico
+        └── Copyright
 
-paginas/tarifas.html
-└── <header>
-    ├── Logo
-    └── <nav id="menu"> enlaces: Inicio y Reservas
-    <main>
-    ├── <section> tarifas de alquiler
-    │   └── <article> tabla de tarifas por tipo de bicicleta
-    ├── <section id="tarifasRecorridosGuiados">
-    │   └── <article> tabla de tarifas de recorridos guiados
-    └── <aside> reserva, condiciones, horarios y elementos necesarios
-    <footer> nombre de Rueda Libre, correo y copyright
 
-paginas/reservas.html
-└── <header>
-    └── <nav id="menu"> enlaces: Inicio y Tarifas y rutas
-    <main>
-    ├── <section>
-    │   └── <article> título, introducción y correo de reservas
-    └── <section>
-        └── <article> horario de atención
-    <aside> información complementaria para contactar y reservar
-    <footer> nombre de Rueda Libre, correo y copyright
+``` 2. `paginas/tarifas.html`
+
+<html lang="es">
+└── <body>
+    ├── <header>
+    │   ├── <img> Logo de Rueda Libre
+    │   ├── <h1> Nombre del negocio: Rueda Libre
+    │   └── <nav id="menuPrincipal">
+    │       └── Menú principal: Inicio, Tarifas y rutas, Reservas
+    │
+    ├── <main>
+    │   ├── <section> Tarifas de alquiler
+    │   │   └── <table> Precios por tipo de bicicleta y duración
+    │   ├── <section id="tarifasRecorridosGuiados">
+    │   │   └── <table> Precios de recorridos guiados
+    │   └── <aside>
+    │       ├── Enlace para reservar
+    │       ├── Condiciones de las tarifas
+    │       ├── Horarios de los recorridos
+    │       └── Lista de qué llevar
+    │
+    └── <footer>
+        ├── Nombre del negocio
+        ├── Correo electrónico
+        └── Copyright
+```
+
+``` 3. `paginas/reservas.html`
+
+<html lang="es">
+└── <body>
+    ├── <header>
+    │   ├── Portada y nombre de Rueda Libre
+    │   └── <nav id="menuPrincipal">
+    │       └── Menú principal: Inicio, Tarifas y rutas, Reservas
+    │
+    ├── <main>
+    │   ├── <section> Información principal de reservas
+    │   │   └── Título, introducción y correo de reservas
+    │   └── <section> Horario de atención
+    │
+    ├── <aside> Información complementaria para contactar y reservar
+    │
+    └── <footer>
+        ├── Nombre del negocio
+        ├── Correo electrónico
+        └── Copyright
+```
