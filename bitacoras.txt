@@ -345,3 +345,13 @@ Gris Asfalto: #5B6470 -> Texto secundario
 | Blanco sobre Naranja Pedal              | 2.21:1        | FAIL    | FAIL       | No apta
 | Naranja Pedal sobre Crema               | 2.05:1        | FAIL    | FAIL       | No apta
 |--------------------------------------------------------------------------------|
+
+
+------------
+
+Propiedades que se heredan en css para los parafos (<p>) y las que no
+
+1. Que se hereda: font-family: "Open Sans", sans-serif, Esta esta heredada desde body
+2. Propiedad que no se hereda: display: block, Esta no esta heredada de ningun lado y se aplica al parrafo por las propiedades predeterminadas del navegador
+
+
