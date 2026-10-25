@@ -18,11 +18,11 @@
         
         <h1>Rueda Libre</h1>
         
-        <nav id="menuPrincipal">
+        <nav id="menu">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../paginas/tarifas.html">Tarifas y rutas</a></li>
-                <li><a href="../paginas/reservas.html">Reservas</a></li>
+                <li><a class="activo" href="../paginas/reservas.html">Reservas</a></li>
             </ul>
         </nav>
     </header>
@@ -57,6 +57,7 @@
                     <p>
                         <label for="numeroDocumento">Numero Documento</label>
                         <select name="tipDocumento" id="tipDocumento" required>
+                            <option value="" disabled selected>Selecciona el documento</option>
                             <option value="CC">Cédula</option>
                             <option value="TI">Tarjeta Identidad</option>
                         </select>

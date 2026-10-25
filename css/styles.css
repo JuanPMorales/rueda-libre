@@ -1,9 +1,9 @@
 :root{
-    --Fondo_general: #FAF6EF;
-    --Texto_secundario: #5B6470;
-    --Títulos_Encabezado: #14213D;
-    --Destacados_Botones_secundarios: #F39A2B;
-    --Botones_enlaces: #1E7A4F;
+    --crema: #FAF6EF;
+    --gris-asfalto: #5B6470;
+    --azul-noche: #14213D;
+    --naranja-pedal: #F39A2B;
+    --verde-ruta: #1E7A4F;
 
     --titulos: 'Montserrat', sans-serif;
     --textos: 'Open Sans', sans-serif;
@@ -15,12 +15,104 @@
 
 body {
     font-family: var(--textos);
-    background-color: var(--Fondo_general);
-    color: var(--Texto_secundario);
+    background-color: var(--crema);
+    color: var(--gris-asfalto);
 }
 
 h1, h2, h3, h4, h5 ,h6 {
     font-family: var(--titulos);
-    color: var(--Títulos_Encabezado);
+    color: var(--azul-noche);
     font-weight: 700;
 }
+
+a {
+    text-decoration: none;
+    color: var(--verde-ruta);
+
+}
+ /* Reglas del compañero */
+#menu a{ 
+    color: var(--gris-asfalto);
+}
+#menu a.activo { 
+    color: var(--verde-ruta); 
+    font-weight: 600; 
+}
+
+#menu a:hover { 
+    color: var(--naranja-pedal); 
+    font-weight: 600; 
+}
+
+#menu a:focus { 
+    color: var(--naranja-pedal);  
+    font-weight: 600; 
+    outline: 1px solid var(--naranja-pedal);
+}
+
+.boton-accion {
+    background-color: var(--verde-ruta);
+    color: var(--crema);
+    padding: var(--espaciado-pequeno) var(--espaciado-mediano);
+    border-radius: 5px;
+    font-weight: 600;
+    margin: var(--espaciado-pequeno);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.boton-accion:hover {
+    background-color: var(--naranja-pedal);
+    color: var(--azul-noche);
+}
+
+.boton-accion:focus {
+    background-color: var(--naranja-pedal);
+    color: var(--azul-noche);
+    outline: 1px solid var(--naranja-pedal);
+}
+
+
+form label{
+    color: var(--azul-noche);
+    display: block;
+    margin-bottom: var(--espaciado-pequeno);
+
+}
+
+select{
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+input{
+    display: block;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"]{
+    display: inline-block;
+    width: auto;
+}
+
+input:focus{
+    outline: 1px solid var(--naranja-pedal);
+}
+
+select:focus{
+    outline: 1px solid var(--naranja-pedal);
+}
+
+textarea{
+    display: block;
+    width: 50%;
+    height: 10rem;
+    box-sizing: border-box;
+}
+
+textarea:focus{
+    outline: 1px solid var(--naranja-pedal);
+}
+

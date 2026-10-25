@@ -354,4 +354,8 @@ Propiedades que se heredan en css para los parafos (<p>) y las que no
 1. Que se hereda: font-family: "Open Sans", sans-serif, Esta esta heredada desde body
 2. Propiedad que no se hereda: display: block, Esta no esta heredada de ningun lado y se aplica al parrafo por las propiedades predeterminadas del navegador
 
+------
 
+Causa de problema del porque no se aplica el color verde ruta al <a> enlace 
+
+la principal causa es que #menu a tiene más especificidad que .activo. Por eso en el DevTools se puede ver que el color verde esta tachado, porque otra regla le esta ganando por especificaciones. 
