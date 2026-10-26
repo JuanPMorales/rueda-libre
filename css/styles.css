@@ -13,11 +13,25 @@
     --espaciado-grande: 1.5rem;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--textos);
     background-color: var(--crema);
     color: var(--gris-asfalto);
 }
+
+header {
+    min-height: 55vh;
+}
+
+main {
+    max-width: 60rem;
+    margin-inline: auto;
+}
+
 
 h1, h2, h3, h4, h5 ,h6 {
     font-family: var(--titulos);
@@ -34,6 +48,12 @@ a {
 #menu a{ 
     color: var(--gris-asfalto);
 }
+
+#menu li{
+    display: inline-block;
+    margin: var(--espaciado-mediano);
+}
+
 #menu a.activo { 
     color: var(--verde-ruta); 
     font-weight: 600; 
@@ -73,6 +93,13 @@ a {
 }
 
 
+fieldset {
+    border: 1px solid var(--gris-asfalto);
+    padding: var(--espaciado-mediano);
+    margin-bottom: var(--espaciado-grande);
+}
+
+
 form label{
     color: var(--azul-noche);
     display: block;
@@ -88,7 +115,7 @@ select{
 
 input{
     display: block;
-    width: 30%;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -107,12 +134,84 @@ select:focus{
 
 textarea{
     display: block;
-    width: 50%;
+    width: 100%;
     height: 10rem;
     box-sizing: border-box;
 }
 
 textarea:focus{
     outline: 1px solid var(--naranja-pedal);
+}
+
+/* Tarjetas de main */
+.servicios {
+    max-width: 60rem;
+    margin-inline: auto;
+    padding: var(--espaciado-grande);
+    text-align: center;
+}
+
+.servicios h2 {
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+.servicios p {
+    margin-bottom: var(--espaciado-grande);
+}
+
+.contenedor-servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--espaciado-mediano); 
+}
+
+.tarjeta-servicio {
+    padding: var(--espaciado-mediano);
+    border: 1px solid var(--gris-asfalto);
+    border-radius: 5px;
+    background-color: var(--crema);
+}
+
+.tarjeta-servicio img {
+    display: block;
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.tarjeta-servicio h3 {
+    margin-top: var(--espaciado-mediano);
+    margin-bottom: var(--espaciado-mediano);
+}
+
+.tarjeta-servicio p {
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+/* Lecturas de las tablas*/
+
+.tarifas {
+    background-color: var(--crema);
+    display: inline-block;
+}
+
+.tarifas h2 {
+    display: block;
+    text-align: center;
+    margin-bottom: var(--espaciado-grande);
+}
+
+.tarifas caption {
+    margin-bottom: var(--espaciado-grande);
+}
+
+.tarifas table{
+    width: 100%;
+    margin-bottom: var(--espaciado-grande);
+}
+
+.tarifas tr, th, td {
+    border: 1px solid var(--gris-asfalto);
 }
 

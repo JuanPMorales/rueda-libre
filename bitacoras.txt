@@ -359,3 +359,16 @@ Propiedades que se heredan en css para los parafos (<p>) y las que no
 Causa de problema del porque no se aplica el color verde ruta al <a> enlace 
 
 la principal causa es que #menu a tiene más especificidad que .activo. Por eso en el DevTools se puede ver que el color verde esta tachado, porque otra regla le esta ganando por especificaciones. 
+
+| Medición             | Con `box-sizing: border-box` | Sin `box-sizing` |
+|----------------------|------------------------------|------------------|
+| Ancho (`width`)      | 240 px                       | 125.062 px       |
+| Alto (`height`)      | 399.2 px                     | 410.4 px         |
+| Padding superior     | 16 px                        | 16 px            |
+| Padding inferior     | 16 px                        | 16 px            |
+| Padding izquierdo    | 16 px                        | 16 px            |
+| Padding derecho      | 16 px                        | 16 px            |
+
+
+
+
