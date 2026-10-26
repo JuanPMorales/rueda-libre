@@ -1,4 +1,5 @@
-:root{
+/* Variables y configuración base */
+:root {
     --crema: #FAF6EF;
     --gris-asfalto: #5B6470;
     --azul-noche: #14213D;
@@ -18,13 +19,22 @@
 }
 
 body {
+    margin: 0;
     font-family: var(--textos);
     background-color: var(--crema);
     color: var(--gris-asfalto);
 }
 
+/* Estructura compartida */
 header {
     min-height: 55vh;
+}
+
+header img {
+    display: block;
+    width: 600px;
+    max-width: 100%;
+    height: auto;
 }
 
 main {
@@ -32,118 +42,120 @@ main {
     margin-inline: auto;
 }
 
+footer {
+    margin-top: var(--espaciado-grande);
+    text-align: center;
+}
 
-h1, h2, h3, h4, h5 ,h6 {
+/* Tipografía y enlaces */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--titulos);
     color: var(--azul-noche);
     font-weight: 700;
 }
 
 a {
-    text-decoration: none;
     color: var(--verde-ruta);
-
-}
- /* Reglas del compañero */
-#menu a{ 
-    color: var(--gris-asfalto);
+    text-decoration: none;
 }
 
-#menu li{
+/* Menú de navegación */
+#menu ul {
+    padding: 0;
+}
+
+#menu li {
     display: inline-block;
     margin: var(--espaciado-mediano);
 }
 
-#menu a.activo { 
-    color: var(--verde-ruta); 
-    font-weight: 600; 
+#menu a{ 
+    color: var(--gris-asfalto);
 }
 
-#menu a:hover { 
-    color: var(--naranja-pedal); 
-    font-weight: 600; 
+#menu a.activo {
+    color: var(--verde-ruta);
+    font-weight: 600;
 }
 
-#menu a:focus { 
-    color: var(--naranja-pedal);  
-    font-weight: 600; 
-    outline: 1px solid var(--naranja-pedal);
+#menu a:hover,
+#menu a:focus {
+    color: var(--naranja-pedal);
+    font-weight: 600;
+}
+
+/* Botones y estados interactivos */
+.boton-accion,
+.WhatsApp {
+    background-color: var(--verde-ruta);
+    color: var(--crema);
+    font-weight: 600;
 }
 
 .boton-accion {
-    background-color: var(--verde-ruta);
-    color: var(--crema);
+    display: inline-block;
+    margin: var(--espaciado-pequeno);
     padding: var(--espaciado-pequeno) var(--espaciado-mediano);
     border-radius: 5px;
-    font-weight: 600;
-    margin: var(--espaciado-pequeno);
-    display: inline-block;
-    text-decoration: none;
 }
 
-.boton-accion:hover {
+.boton-accion:hover,
+.boton-accion:focus,
+.WhatsApp:hover,
+.WhatsApp:focus {
     background-color: var(--naranja-pedal);
     color: var(--azul-noche);
 }
 
-.boton-accion:focus {
-    background-color: var(--naranja-pedal);
-    color: var(--azul-noche);
+.boton-accion:focus,
+.WhatsApp:focus,
+#menu a:focus,
+input:focus,
+select:focus,
+textarea:focus {
     outline: 1px solid var(--naranja-pedal);
 }
 
-
+/* Formulario */
 fieldset {
-    border: 1px solid var(--gris-asfalto);
-    padding: var(--espaciado-mediano);
     margin-bottom: var(--espaciado-grande);
+    padding: var(--espaciado-mediano);
+    border: 1px solid var(--gris-asfalto);
 }
 
-
-form label{
+form label {
+    display: block;
+    margin-bottom: var(--espaciado-pequeno);
     color: var(--azul-noche);
-    display: block;
-    margin-bottom: var(--espaciado-pequeno);
-
 }
 
-select{
+select,
+input,
+textarea {
     display: block;
     box-sizing: border-box;
-    margin-bottom: var(--espaciado-pequeno);
-}
-
-input{
-    display: block;
     width: 100%;
-    box-sizing: border-box;
 }
 
-input[type="checkbox"]{
+select {
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+input[type="checkbox"] {
     display: inline-block;
     width: auto;
 }
 
-input:focus{
-    outline: 1px solid var(--naranja-pedal);
-}
-
-select:focus{
-    outline: 1px solid var(--naranja-pedal);
-}
-
-textarea{
-    display: block;
-    width: 100%;
+textarea {
     height: 10rem;
-    box-sizing: border-box;
 }
 
-textarea:focus{
-    outline: 1px solid var(--naranja-pedal);
-}
-
-/* Tarjetas de main */
+/* Servicios */
 .servicios {
     max-width: 60rem;
     margin-inline: auto;
@@ -161,23 +173,35 @@ textarea:focus{
 
 .contenedor-servicios {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--espaciado-mediano); 
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espaciado-mediano);
 }
 
 .tarjeta-servicio {
+    position: relative;
     padding: var(--espaciado-mediano);
     border: 1px solid var(--gris-asfalto);
     border-radius: 5px;
     background-color: var(--crema);
 }
 
+.nuevo {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    padding: var(--espaciado-pequeno);
+    border-radius: 5px;
+    background-color: var(--naranja-pedal);
+    color: var(--azul-noche);
+    font-weight: 600;
+}
+
 .tarjeta-servicio img {
     display: block;
     width: 100%;
     height: 12rem;
-    object-fit: cover;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .tarjeta-servicio h3 {
@@ -189,29 +213,37 @@ textarea:focus{
     margin-bottom: var(--espaciado-pequeno);
 }
 
-/* Lecturas de las tablas*/
-
+/* Tablas de tarifas */
 .tarifas {
-    background-color: var(--crema);
     display: inline-block;
+    background-color: var(--crema);
 }
 
 .tarifas h2 {
     display: block;
-    text-align: center;
     margin-bottom: var(--espaciado-grande);
+    text-align: center;
 }
 
 .tarifas caption {
     margin-bottom: var(--espaciado-grande);
 }
 
-.tarifas table{
+.tarifas table {
     width: 100%;
     margin-bottom: var(--espaciado-grande);
 }
 
-.tarifas tr, th, td {
+.tarifas th,
+.tarifas td {
     border: 1px solid var(--gris-asfalto);
 }
 
+/* Botón flotante de WhatsApp */
+.WhatsApp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: var(--espaciado-pequeno) var(--espaciado-mediano);
+    border-radius: 10px;
+}

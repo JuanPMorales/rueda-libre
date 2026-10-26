@@ -370,5 +370,22 @@ la principal causa es que #menu a tiene más especificidad que .activo. Por eso 
 | Padding derecho      | 16 px                        | 16 px            |
 
 
+Resumen de la semana – MiniRetos
 
+Día 1: Fundamentos de HTML
 
+Aprendí a utilizar las etiquetas básicas de HTML para crear la estructura de una página web, organizar la información en tablas y crear un repositorio para guardar y controlar los cambios del proyecto.
+
+Día 2: HTML semántico y formularios
+
+Aprendí a organizar mejor el contenido utilizando etiquetas semánticas como header, nav, main, section y footer. También trabajé con formularios, sus campos y validaciones para facilitar el ingreso de información por parte de los usuarios.
+
+Semana 3: Introducción a CSS y estilos
+
+Aprendí a darle estilo a las páginas web mediante CSS, utilizando colores, fuentes, márgenes, bordes y espacios internos (padding). También trabajé con el modelo de caja (box model), la propiedad box-sizing, la distribución de tarjetas, los enlaces y los elementos que permanecen fijos al desplazarse por la página.
+
+Durante los retos, apliqué estos conocimientos al proyecto Rueda Libre, mejorando su estructura, navegación, presentación visual y accesibilidad.
+
+¿Qué mejoraría?
+
+Mejoraría la organización y reutilización del código CSS, profundizaría en el modelo de caja y practicaría más las herramientas de DevTools para identificar errores con mayor facilidad. 
