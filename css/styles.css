@@ -172,9 +172,9 @@ textarea {
 }
 
 .contenedor-servicios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--espaciado-mediano);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaciado-pequeno);
 }
 
 .tarjeta-servicio {
@@ -183,6 +183,9 @@ textarea {
     border: 1px solid var(--gris-asfalto);
     border-radius: 5px;
     background-color: var(--crema);
+    min-height: 25rem;
+    min-width: 9rem;
+    max-width: 14rem;
 }
 
 .nuevo {
