@@ -388,4 +388,4 @@ Durante los retos, apliqué estos conocimientos al proyecto Rueda Libre, mejoran
 
 ¿Qué mejoraría?
 
-Mejoraría la organización y reutilización del código CSS, profundizaría en el modelo de caja y practicaría más las herramientas de DevTools para identificar errores con mayor facilidad. 
+Mejoraría la organización y reutilización del código CSS, profundizaría en el modelo de caja y practicaría más las herramientas de DevTools para identificar errores con mayor facilidad.
