@@ -27,13 +27,16 @@ body {
 
 /* Estructura compartida */
 header {
-    min-height: 55vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--espaciado-mediano);
+    padding: var(--espaciado-grande);
 }
 
-header img {
+#portada {
     display: block;
-    width: 600px;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -66,12 +69,15 @@ a {
 
 /* Menú de navegación */
 #menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaciado-mediano);
+    list-style: none;
     padding: 0;
 }
 
 #menu li {
-    display: inline-block;
-    margin: var(--espaciado-mediano);
+    margin: var(--espaciado-pequeno) ;
 }
 
 #menu a {
