@@ -46,9 +46,24 @@ main {
 }
 
 footer {
+    display: grid;
+    
+    grid-template-columns: 20% 60% 20%;
+    gap: var(--espaciado-mediano);
     margin-top: var(--espaciado-grande);
     text-align: center;
+    align-items: center;
 }
+
+footer p {
+    text-align: center;
+    grid-column: 2;
+}
+
+
+
+
+
 
 /* Tipografía y enlaces */
 h1,
