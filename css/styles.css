@@ -45,10 +45,22 @@ main {
     margin-inline: auto;
 }
 
+#encuentranos h2 {
+    text-align: center;
+    margin-bottom: var(--espaciado-mediano);
+}
+
+#encuentranos img {
+    display: block;
+    width: 50%;
+    height: auto;
+    justify-self: center;
+}
+
 footer {
-    display: grid;
-    
-    grid-template-columns: 20% 60% 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: var(--espaciado-mediano);
     margin-top: var(--espaciado-grande);
     text-align: center;
@@ -56,13 +68,8 @@ footer {
 }
 
 footer p {
-    text-align: center;
-    grid-column: 2;
+    flex: 1 1 100%;
 }
-
-
-
-
 
 
 /* Tipografía y enlaces */
