@@ -45,6 +45,27 @@ main {
     margin-inline: auto;
 }
 
+/* portada inicio*/
+
+.seccion-portada{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espaciado-grande);
+}
+
+.contenedor-portada{
+    text-align: center;
+    align-self: center;
+}
+
+.seccion-portada img {
+    width: 100%;
+    height: auto;
+
+}
+
+
+
 #encuentranos {
     display: grid;
     gap: var(--espaciado-mediano);
@@ -95,6 +116,10 @@ a {
 }
 
 /* Menú de navegación */
+#menu {
+    align-self: center;
+}
+
 #menu ul {
     display: flex;
     flex-wrap: wrap;
