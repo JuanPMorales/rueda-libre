@@ -31,107 +31,108 @@
         <section>
             <h2>Reserva tu bicicleta</h2>
             <a href="mailto:hola@ruedalibre.example">Escribenos a nuestro correo</a>
-        </section>
+        </section class="formulario-informacion">
+            <section>
+                <section class="horario-atencion">
+                <h2>Horario de atención</h2>
+                <dl>
+                    <dt>lunes a viernes</dt>
+                    <dd>7:00 a. m.</dd>
+                        <dd>7:00 p. m.</dd>         
+                    <dt>Sábados, Domingos y Festivos</dt>
+                        <dd>6:00 a. m.</dd>
+                        <dd>2:00 p. m.</dd>
+                </dl>
+            </section>
 
-        <section>
-            <h2>Horario de atención</h2>
-            <dl>
-                <dt>lunes a viernes</dt>
-                <dd>7:00 a. m.</dd>
-                    <dd>7:00 p. m.</dd>         
-                <dt>Sábados, Domingos y Festivos</dt>
-                    <dd>6:00 a. m.</dd>
-                    <dd>2:00 p. m.</dd>
-            </dl>
+            <section id="formularioDereserva">
+                <h2>Formulario De Reserva</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Tus Datos</legend>
+                        <p>
+                            <label for="nombreCompleto">Nombre Completo</label>
+                            <input type="text" id="nombreCompleto" name="NombreCompleto" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{3,}(?:\s+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,})+$" title="Por favor, introduce tu nombre y al menos un apellido (solo letras y espacios)." placeholder="Pepito Perez" minlength="3" required>
+                        </p>
+                        <p>
+                            <label for="numeroDocumento">Numero Documento</label>
+                            <select name="tipDocumento" id="tipDocumento" required>
+                                <option value="" disabled selected>Selecciona el documento</option>
+                                <option value="CC">Cédula</option>
+                                <option value="TI">Tarjeta Identidad</option>
+                            </select>
+                            <input type="number" id="numeroDocumento" name="numDocumento" minlength="6" required>
+                        </p>
+                        <p>
+                            <label for="correo">Correo Electrónico</label>
+                            <input type="email" id="correo" name="correoElectronico" required>
+                        </p>
+                        <p>
+                            <label for="celular">Celular</label>
+                            <input type="tel" id="celular" name="numCelular" pattern="^3[0-9]{9}" title="Escribe 10 numeros sin espacio y que comience en 3" required>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Tu alquiler</legend>
+                        <p>
+                            <label for="fechaAlquiler">Fecha Alquiler</label>
+                            <input type="date" name="fechaAlquiler" id="fechaAlquiler" min="2026-10-01" max="2026-12-31" required>
+                        </p>
+                        <p>
+                            <label for="tipoBicicleta">Tipo Bicicletas</label>
+                            <select name="bicicletas" id="tipoBicicleta" required>
+                                <option value="" disabled selected>Selecciona tu bicicletas</option>
+                                <option value="urbana">Urbana</option>
+                                <option value="montaña">Montaña</option>
+                                <option value="electrica">Eléctrica</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="tipoPlan">Plan</label>
+                            <select name="planes" id="tipoPlan" required>
+                                <option value="" disabled selected>Selecciona tu plan</option>
+                                <option value="hora">1 Hora</option>
+                                <option value="medioDia">Medio día</option>
+                                <option value="diaCompleto">Día completo</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="cantidadBicicletas">Cantidad de bicicletas</label>
+                            <input type="number" name="numBicicletas" id="cantidadBicicletas" min="1" max="6">
+                        </p>
+                        <p>
+                            <label for="recorrdoGuiado">Recorrido Guiados</label>
+                            <select name="recorridos" id="recorrdoGuiado" required>
+                                <option value="" disabled selected>Selecciona tu recorrdo</option>
+                                <option value="ninguna">Ninguna</option>
+                                <option value="rioParques">Río y Parques</option>
+                                <option value="Sabores de Barrio">Sabores de Barrio</option>
+                                <option value="Reto Las Palmas">Reto Las Palmas</option>
+                            </select>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>confirmación</legend>
+                        <p>
+                            <label for="confDatos">¿Confirmas tus datos?</label>
+                            <input type="checkbox" name="confDatos" id="confDatos" required>
+                        </p>
+                        <p>
+                            <label for="terminosCondiciones">Terminos y Condiciones</label>
+                            <input type="checkbox" name="confiTerminosCondiciones" id="terminosCondiciones" required>
+                        </p>
+                        <p>
+                            <label for="sectComentarios">Comentarios</label>
+                            <textarea name="comentario" id="sectComentarios" placeholder="¿Algun comentario?" maxlength="300"></textarea>
+                        </p>
+                    </fieldset>
+                    <p><button class="boton-accion" type="submit">Enviar</button></p>
+                </form>
+            </section>
         </section>
-
-        <section id="formularioDereserva">
-            <h2>Formulario De Reserva</h2>
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Tus Datos</legend>
-                    <p>
-                        <label for="nombreCompleto">Nombre Completo</label>
-                        <input type="text" id="nombreCompleto" name="NombreCompleto" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{3,}(?:\s+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,})+$" title="Por favor, introduce tu nombre y al menos un apellido (solo letras y espacios)." placeholder="Pepito Perez" minlength="3" required>
-                    </p>
-                    <p>
-                        <label for="numeroDocumento">Numero Documento</label>
-                        <select name="tipDocumento" id="tipDocumento" required>
-                            <option value="" disabled selected>Selecciona el documento</option>
-                            <option value="CC">Cédula</option>
-                            <option value="TI">Tarjeta Identidad</option>
-                        </select>
-                        <input type="number" id="numeroDocumento" name="numDocumento" minlength="6" required>
-                    </p>
-                    <p>
-                        <label for="correo">Correo Electrónico</label>
-                        <input type="email" id="correo" name="correoElectronico" required>
-                    </p>
-                    <p>
-                        <label for="celular">Celular</label>
-                        <input type="tel" id="celular" name="numCelular" pattern="^3[0-9]{9}" title="Escribe 10 numeros sin espacio y que comience en 3" required>
-                    </p>
-                </fieldset>
-                <fieldset>
-                    <legend>Tu alquiler</legend>
-                    <p>
-                        <label for="fechaAlquiler">Fecha Alquiler</label>
-                        <input type="date" name="fechaAlquiler" id="fechaAlquiler" min="2026-10-01" max="2026-12-31" required>
-                    </p>
-                    <p>
-                        <label for="tipoBicicleta">Tipo Bicicletas</label>
-                        <select name="bicicletas" id="tipoBicicleta" required>
-                            <option value="" disabled selected>Selecciona tu bicicletas</option>
-                            <option value="urbana">Urbana</option>
-                            <option value="montaña">Montaña</option>
-                            <option value="electrica">Eléctrica</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="tipoPlan">Plan</label>
-                        <select name="planes" id="tipoPlan" required>
-                            <option value="" disabled selected>Selecciona tu plan</option>
-                            <option value="hora">1 Hora</option>
-                            <option value="medioDia">Medio día</option>
-                            <option value="diaCompleto">Día completo</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="cantidadBicicletas">Cantidad de bicicletas</label>
-                        <input type="number" name="numBicicletas" id="cantidadBicicletas" min="1" max="6">
-                    </p>
-                    <p>
-                        <label for="recorrdoGuiado">Recorrido Guiados</label>
-                        <select name="recorridos" id="recorrdoGuiado" required>
-                            <option value="" disabled selected>Selecciona tu recorrdo</option>
-                            <option value="ninguna">Ninguna</option>
-                            <option value="rioParques">Río y Parques</option>
-                            <option value="Sabores de Barrio">Sabores de Barrio</option>
-                            <option value="Reto Las Palmas">Reto Las Palmas</option>
-                        </select>
-                    </p>
-                </fieldset>
-                <fieldset>
-                    <legend>confirmación</legend>
-                    <p>
-                        <label for="confDatos">¿Confirmas tus datos?</label>
-                        <input type="checkbox" name="confDatos" id="confDatos" required>
-                    </p>
-                    <p>
-                        <label for="terminosCondiciones">Terminos y Condiciones</label>
-                        <input type="checkbox" name="confiTerminosCondiciones" id="terminosCondiciones" required>
-                    </p>
-                    <p>
-                        <label for="sectComentarios">Comentarios</label>
-                        <textarea name="comentario" id="sectComentarios" placeholder="¿Algun comentario?" maxlength="300"></textarea>
-                    </p>
-                </fieldset>
-                <p><button class="boton-accion" type="submit">Enviar</button></p>
-            </form>
-        </section>
+        
 
         <a class="WhatsApp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a>
-
     </main>
 
     <footer>
