@@ -393,3 +393,16 @@ Mejoraría la organización y reutilización del código CSS, profundizaría en 
 ------------
 
 Al estrechar un poco la pagina el header y el footer se adaptan a la tamaño de la pantalla
+
+
+COLUMNAS VISIBLES DEL GRID
+=========================
+
++----------------+-------------------------+
+| Resolución     | Columnas del grid       |
++----------------+-------------------------+
+| 1280 px        | 9 x 9                   |
+| 900 px         | 9 x 9                   |
+| 500 px         | 7                       |
++----------------+-------------------------+
+
