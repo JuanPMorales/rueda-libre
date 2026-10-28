@@ -45,13 +45,18 @@ main {
     margin-inline: auto;
 }
 
+#encuentranos {
+    display: grid;
+    gap: var(--espaciado-mediano);
+    margin-top: var(--espaciado-grande);
+}
+
 #encuentranos h2 {
     text-align: center;
     margin-bottom: var(--espaciado-mediano);
 }
 
 #encuentranos img {
-    display: block;
     width: 50%;
     height: auto;
     justify-self: center;
@@ -111,6 +116,8 @@ a {
     font-weight: 600;
 }
 
+
+.tarjetas-flota a:hover,
 #menu a:hover,
 #menu a:focus {
     color: var(--naranja-pedal);
@@ -140,6 +147,7 @@ a {
     color: var(--azul-noche);
 }
 
+.tarjetas-flota a:focus,
 .boton-accion:focus,
 .WhatsApp:focus,
 #menu a:focus,
@@ -259,11 +267,11 @@ textarea {
 }
 
 .tarjetas-flota {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-pequeno);
     padding: var(--espaciado-mediano);
-    border: 1px solid var(--gris-asfalto);
     border-radius: 5px;
-    background-color: var(--crema);
 }
 
 .tarjetas-flota img{
@@ -274,9 +282,10 @@ textarea {
     object-fit: cover;
 }
 
-
-
-
+.tarjetas-flota a {
+    margin-top: auto;
+    align-self: flex-start;
+}
 
 
 
