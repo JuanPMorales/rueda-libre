@@ -380,3 +380,20 @@ textarea {
     padding: var(--espaciado-pequeno) var(--espaciado-mediano);
     border-radius: 10px;
 }
+
+/* formulario reservas 2:1 */
+
+.formulario-informacion {
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    gap: var(--espaciado-mediano)
+}
+
+.formulario-informacion h2 {
+    text-align: center;
+}
+
+.horario-atencion {
+    display: block;
+    text-align: center;
+}
