@@ -38,10 +38,10 @@
                 <form action="#" method="post">
                     <fieldset>
                         <legend>Tus Datos</legend>
-                        <p>
+                        <div>
                             <label for="nombreCompleto">Nombre Completo</label>
                             <input type="text" id="nombreCompleto" name="NombreCompleto" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{3,}(?:\s+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,})+$" title="Por favor, introduce tu nombre y al menos un apellido (solo letras y espacios)." placeholder="Pepito Perez" minlength="3" required>
-                        </p>
+                        </div>
                         <section class="parejas">
                             <div>
                                 <label for="numeroDocumento">Numero Documento</label>
@@ -57,18 +57,18 @@
                                 <input type="tel" id="celular" name="numCelular" pattern="^3[0-9]{9}" title="Escribe 10 numeros sin espacio y que comience en 3" required>
                             </div>
                         </section>
-                        <p>
+                        <div>
                             <label for="correo">Correo Electrónico</label>
                             <input type="email" id="correo" name="correoElectronico" required>
-                        </p>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>Tu alquiler</legend>
-                        <p>
+                        <div>
                             <label for="fechaAlquiler">Fecha Alquiler</label>
                             <input type="date" name="fechaAlquiler" id="fechaAlquiler" min="2026-10-01" max="2026-12-31" required>
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             <label for="tipoBicicleta">Tipo Bicicletas</label>
                             <select name="bicicletas" id="tipoBicicleta" required>
                                 <option value="" disabled selected>Selecciona tu bicicletas</option>
@@ -76,8 +76,8 @@
                                 <option value="montaña">Montaña</option>
                                 <option value="electrica">Eléctrica</option>
                             </select>
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             <label for="tipoPlan">Plan</label>
                             <select name="planes" id="tipoPlan" required>
                                 <option value="" disabled selected>Selecciona tu plan</option>
@@ -85,12 +85,12 @@
                                 <option value="medioDia">Medio día</option>
                                 <option value="diaCompleto">Día completo</option>
                             </select>
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             <label for="cantidadBicicletas">Cantidad de bicicletas</label>
                             <input type="number" name="numBicicletas" id="cantidadBicicletas" min="1" max="6">
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             <label for="recorrdoGuiado">Recorrido Guiados</label>
                             <select name="recorridos" id="recorrdoGuiado" required>
                                 <option value="" disabled selected>Selecciona tu recorrdo</option>
@@ -99,24 +99,29 @@
                                 <option value="Sabores de Barrio">Sabores de Barrio</option>
                                 <option value="Reto Las Palmas">Reto Las Palmas</option>
                             </select>
-                        </p>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>confirmación</legend>
-                        <p>
+                        <div>
                             <label for="confDatos">¿Confirmas tus datos?</label>
                             <input type="checkbox" name="confDatos" id="confDatos" required>
-                        </p>
-                        <p>
+                        </div>
+                    
+                        <div>
                             <label for="terminosCondiciones">Terminos y Condiciones</label>
                             <input type="checkbox" name="confiTerminosCondiciones" id="terminosCondiciones" required>
-                        </p>
-                        <p>
+                        </div>
+                    
+                        <div>
                             <label for="sectComentarios">Comentarios</label>
                             <textarea name="comentario" id="sectComentarios" placeholder="¿Algun comentario?" maxlength="300"></textarea>
-                        </p>
+                        </div>
                     </fieldset>
-                    <p><button class="boton-accion" type="submit">Enviar</button></p>
+                
+                    <div>
+                        <button class="boton-accion" type="submit">Enviar</button>
+                    </div>
                 </form>
             </section>
             <section class="horario-atencion">
