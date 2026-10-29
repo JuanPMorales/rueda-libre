@@ -406,3 +406,36 @@ COLUMNAS VISIBLES DEL GRID
 | 500 px         | 7                       |
 +----------------+-------------------------+
 
+
+RAZON DEL USO DE FLEX Y GRID EN LOS ULTIMOS 5 COMMITS
+======================================================
+
+1. formulario con dos campos en la misma fila
+    Se utilizo display: flex en .parejas para colocar el tipo y numero de
+    documento junto al celular. flex-wrap permite que los campos bajen a otra
+    linea cuando el ancho de la pantalla no es suficiente, y flex: 1 reparte
+    el espacio disponible entre las dos columnas.
+
+2. formulario de reserva en grid 2:1
+    Se utilizo display: grid en .formulario-informacion para separar el
+    formulario y el horario de atencion en dos columnas. La relacion 2fr 1fr
+    da mas espacio al formulario que al horario, mientras gap mantiene una
+    separacion uniforme.
+
+3. tarjetas de Nuestras rutas
+    Se utilizo display: grid en .Nuestras-rutas para distribuir las tarjetas
+    en columnas responsivas con repeat(auto-fit, minmax(...)). Asi las tarjetas
+    se acomodan automaticamente segun el ancho disponible. Se utilizo display:
+    flex en .tarjetas para ordenar verticalmente la imagen, el texto y el
+    enlace; margin-top: auto mantiene los enlaces alineados al final.
+
+4. portada de bienvenida
+    Se utilizo display: grid en .seccion-portada para organizar el texto de
+    bienvenida y la imagen en columnas responsivas. auto-fit y minmax permiten
+    que ambas partes se adapten a distintos tamanos de pantalla sin fijar una
+    cantidad de columnas.
+
+
+
+
+
