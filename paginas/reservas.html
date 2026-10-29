@@ -42,22 +42,24 @@
                             <label for="nombreCompleto">Nombre Completo</label>
                             <input type="text" id="nombreCompleto" name="NombreCompleto" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{3,}(?:\s+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,})+$" title="Por favor, introduce tu nombre y al menos un apellido (solo letras y espacios)." placeholder="Pepito Perez" minlength="3" required>
                         </p>
-                        <p>
-                            <label for="numeroDocumento">Numero Documento</label>
-                            <select name="tipDocumento" id="tipDocumento" required>
-                                <option value="" disabled selected>Selecciona el documento</option>
-                                <option value="CC">Cédula</option>
-                                <option value="TI">Tarjeta Identidad</option>
-                            </select>
-                            <input type="number" id="numeroDocumento" name="numDocumento" minlength="6" required>
-                        </p>
+                        <section class="parejas">
+                            <div>
+                                <label for="numeroDocumento">Numero Documento</label>
+                                <select name="tipDocumento" id="tipDocumento" required>
+                                    <option value="" disabled selected>Selecciona el documento</option>
+                                    <option value="CC">Cédula</option>
+                                    <option value="TI">Tarjeta Identidad</option>
+                                </select>
+                                <input type="number" id="numeroDocumento" name="numDocumento" minlength="6" required>
+                            </div>
+                            <div>
+                                <label for="celular">Celular</label>
+                                <input type="tel" id="celular" name="numCelular" pattern="^3[0-9]{9}" title="Escribe 10 numeros sin espacio y que comience en 3" required>
+                            </div>
+                        </section>
                         <p>
                             <label for="correo">Correo Electrónico</label>
                             <input type="email" id="correo" name="correoElectronico" required>
-                        </p>
-                        <p>
-                            <label for="celular">Celular</label>
-                            <input type="tel" id="celular" name="numCelular" pattern="^3[0-9]{9}" title="Escribe 10 numeros sin espacio y que comience en 3" required>
                         </p>
                     </fieldset>
                     <fieldset>

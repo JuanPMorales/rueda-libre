@@ -199,6 +199,9 @@ input,
 textarea {
     display: block;
     box-sizing: border-box;
+    padding: var(--espaciado-mediano);
+    border-radius: 5px;
+    border: none;
     width: 100%;
 }
 
@@ -386,7 +389,7 @@ textarea {
 .formulario-informacion {
     display: grid;
     grid-template-columns:2fr 1fr;
-    gap: var(--espaciado-mediano)
+    gap: var(--espaciado-mediano);
 }
 
 .formulario-informacion h2 {
@@ -396,4 +399,14 @@ textarea {
 .horario-atencion {
     display: block;
     text-align: center;
+}
+
+.parejas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaciado-grande);
+}
+
+.parejas div {
+    flex: 1;
 }
