@@ -435,7 +435,29 @@ RAZON DEL USO DE FLEX Y GRID EN LOS ULTIMOS 5 COMMITS
     que ambas partes se adapten a distintos tamanos de pantalla sin fijar una
     cantidad de columnas.
 
+BITÁCORA DE PRUEBAS RESPONSIVE
 
+1. RESOLUCIÓN: 360 PX
+Problema: La tabla presentaba problemas de visualización y desbordamiento horizontal.
+Solución: Se aplicó la propiedad CSS border-collapse: collapse; para unir los bordes de las celdas y mejorar la presentación de la tabla.
+
+2. RESOLUCIÓN: 360 PX
+Problema: Los cuatro elementos del footer aparecían demasiado juntos, afectando la distribución del contenido.
+Solución: Se agregaron las siguientes propiedades CSS dentro del media query:
+
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+gap: var(--espaciado-mediano);
+align-items: center;
+
+3. RESOLUCIÓN: 768 PX EN ADELANTE
+Problema: Los elementos del header aparecían centrados y no tenían una distribución adecuada.
+Solución: Se agregó la propiedad CSS justify-content: space-between; dentro del media query para distribuir correctamente los elementos del encabezado.
+
+CONCLUSIÓN:
+
+Se realizaron pruebas de visualización en diferentes resoluciones para identificar problemas de diseño responsive. Se ajustaron las propiedades CSS mediante media queries y Flexbox para mejorar la distribución de los elementos y garantizar una mejor adaptación a diferentes tamaños de pantalla.
 
 
 
