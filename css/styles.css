@@ -321,8 +321,13 @@ textarea {
 
 /* Tablas de tarifas */
 .tarifas {
-    display: inline-block;
+    display: block;
     background-color: var(--crema);
+}
+
+.tarifas table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .tarifas h2 {
@@ -391,6 +396,10 @@ textarea {
     
     .parejas div {
         flex: 1; 
+    }
+
+    .tarifas {
+        display: inline-block;
     }
 
     footer{
