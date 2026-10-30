@@ -89,13 +89,8 @@ main p {
 }
 
 footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: var(--espaciado-mediano);
     margin-top: var(--espaciado-grande);
     text-align: center;
-    align-items: center;
 }
 
 footer p {
@@ -374,4 +369,36 @@ textarea {
 .horario-atencion {
     display: block;
     text-align: center;
+}
+
+/* media para tablets*/
+@media (min-width: 768px) {
+    header{
+        justify-content: space-between;
+    }
+
+    .formulario-informacion{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--espaciado-pequeno)
+    }
+
+    .parejas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--espaciado-mediano);
+    }
+    
+    .parejas div {
+        flex: 1; 
+    }
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap:var(--espaciado-mediano);
+        align-items: center;
+    }
+
 }
