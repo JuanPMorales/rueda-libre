@@ -459,5 +459,101 @@ CONCLUSIÓN:
 
 Se realizaron pruebas de visualización en diferentes resoluciones para identificar problemas de diseño responsive. Se ajustaron las propiedades CSS mediante media queries y Flexbox para mejorar la distribución de los elementos y garantizar una mejor adaptación a diferentes tamaños de pantalla.
 
+===========================================================
+          DISTRIBUCIÓN DE TARJETAS DE LA FLOTA
+============================================================
+
+1. TIEMPO INVERTIDO
+------------------------------------------------------------
+Tiempo total: 34 minutos y 58 segundos (34:58).
+
+2. COMPARACIÓN: CSS PROPIO VS. BOOTSTRAP
+------------------------------------------------------------
+
+| Aspecto              | CSS propio                  | Bootstrap                  |
+|----------------------|-----------------------------|-----------------------------|
+| Distribución         | display: grid               | row                         |
+| Columnas             | auto-fit y minmax(280px,1fr)| col-12, col-sm-6,           |
+|                      |                             | col-lg-4, col-xl-3          |
+| Separación           | gap: var(--espaciado-mediano)| g-3                        |
+| Distribución interna | display: flex               | Clases de utilidad          |
+| Espaciado interno    | padding personalizado       | p-4                         |
+| Imágenes             | width, height y object-fit  | img-fluid                   |
+| Tarjetas             | Estilos personalizados     | border, rounded, bg-light   |
+
+3. ¿QUÉ ME APORTÓ BOOTSTRAP SIN ESFUERZO?
+------------------------------------------------------------
+
+Bootstrap me permitió organizar las tarjetas de bicicletas
+de una manera más rápida, especialmente al distribuirlas
+en columnas y adaptar la cantidad de tarjetas según el
+tamaño de la pantalla.
+
+Con las clases del sistema Grid de Bootstrap pude conseguir:
+
+- Una distribución de tarjetas en diferentes columnas.
+- Adaptación a distintos tamaños de pantalla.
+- Separación entre las tarjetas mediante g-3.
+- Bordes, fondos y espaciados utilizando clases como
+  border, rounded, bg-light y p-4.
+
+Esto redujo la cantidad de CSS que tenía que escribir
+manualmente para organizar la distribución de la flota.
+
+4. ¿QUÉ CONTROL PERDÍ AL UTILIZAR BOOTSTRAP?
+------------------------------------------------------------
+
+Al reemplazar mi CSS personalizado por las clases de
+Bootstrap, perdí parte del control que tenía sobre la
+apariencia y distribución de las tarjetas.
+
+Principalmente:
+
+- Perdí el control preciso sobre el tamaño y la altura
+  de las imágenes.
+- Las imágenes dejaron de tener el mismo comportamiento
+  visual que había definido anteriormente.
+- Perdí el control personalizado sobre la altura de las
+  tarjetas, por lo que ya no todas conservaban la misma
+  apariencia.
+- Tuve menos libertad para ajustar los espacios y la
+  distribución interna de cada tarjeta.
+
+En mi versión propia podía definir específicamente cómo
+debían comportarse las imágenes, los textos y los enlaces.
+
+5. ¿QUÉ HACÍAN LAS PROPIEDADES CSS QUE UTILIZABA?
+------------------------------------------------------------
+
+| Propiedad CSS                 | Función                         |
+|-------------------------------|---------------------------------|
+| display: flex                 | Activa Flexbox para organizar   |
+|                               | los elementos internos.         |
+| flex-direction: column        | Coloca los elementos uno debajo |
+|                               | del otro, en dirección vertical.|
+| gap: var(--espaciado-pequeno)  | Define la separación entre los  |
+|                               | elementos internos.             |
+| padding: var(--espaciado-mediano) | Agrega espacio interior entre |
+|                               | el contenido y los bordes.      |
+
+Estas cuatro propiedades me permitían organizar el
+contenido de cada tarjeta de bicicleta de forma vertical,
+manteniendo una separación uniforme y un espacio interno
+personalizado.
 
 
+6. MI CONCLUSION
+
+Comprobé que Bootstrap facilita
+y agiliza el trabajo de distribución de elementos,
+especialmente cuando se utiliza su sistema Grid para
+organizar tarjetas de manera adaptable.
+
+Mi css me daba mayor control sobre las
+dimensiones de las imágenes, la altura de las tarjetas
+y la distribución de su contenido.
+
+En conclusión, Bootstrap me permitió ahorrar tiempo en
+la organización del Grid, pero mi CSS personalizado me
+ofrecía mayor precisión sobre el diseño visual de las
+tarjetas.
