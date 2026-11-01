@@ -557,3 +557,22 @@ En conclusión, Bootstrap me permitió ahorrar tiempo en
 la organización del Grid, pero mi CSS personalizado me
 ofrecía mayor precisión sobre el diseño visual de las
 tarjetas.
+
+=======================
+CLASES DE BOOTSTRAP
+=======================
+
+1. rounded:
+   Redondea las esquinas de un elemento, como imágenes, tarjetas o contenedores.
+
+2. img-fluid:
+   Hace que una imagen sea adaptable al tamaño de su contenedor, evitando que se desborde.
+
+3. g-3:
+   Agrega un espacio de separación (gutter) entre las columnas y filas de una cuadrícula de Bootstrap.
+
+4. ratio-4x3:
+   Establece una proporción de aspecto de 4:3 para un elemento, como una imagen o un video.
+
+5. ratio:
+   Permite mantener una proporción de aspecto determinada en un contenedor, ayudando a conservar sus dimensiones relativas.
