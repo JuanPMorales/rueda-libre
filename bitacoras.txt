@@ -576,3 +576,20 @@ CLASES DE BOOTSTRAP
 
 5. ratio:
    Permite mantener una proporción de aspecto determinada en un contenedor, ayudando a conservar sus dimensiones relativas.
+
+CONFLICTOS ENTRE ESTILOS PROPIOS Y BOOTSTRAP
+
+1. Alineación de títulos: text-center vs. regla global de encabezados
+
+En los títulos de las secciones “Bicicletas” y “¿Por qué Rueda Libre?” se agregó la clase de Bootstrap `text-center`. Sin embargo, en styles.css ya existe una regla global para h1, h2, h3, h4, h5 y h6 que aplica `text-align: center`.
+
+Solución: quitar la clase `text-center` de esos títulos si se desea mantener la alineación central desde la hoja de estilos propia. Es un mismo conflicto repetido en dos elementos, no dos conflictos diferentes.
+
+2. Peso de la fuente: fw-semibold vs. regla global de encabezados
+
+El título “¿Por qué Rueda Libre?” usa la clase `fw-semibold`, que establece un peso de fuente seminegrita. La regla global de encabezados en styles.css establece `font-weight: 700`.
+
+Solución: quitar `fw-semibold` si se quiere que los encabezados mantengan el peso definido en styles.css. Si se conserva, Bootstrap prevalece para ese elemento.
+
+NOTA:
+Los dos casos anteriores son conflictos identificados en el código revisado y en DevTools
