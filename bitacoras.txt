@@ -593,3 +593,88 @@ Solución: quitar `fw-semibold` si se quiere que los encabezados mantengan el pe
 
 NOTA:
 Los dos casos anteriores son conflictos identificados en el código revisado y en DevTools
+
+===========================================================
+       COMPARATIVA DE styles.css: V1.5 Y VERSION ACTUAL
+===========================================================
+
+NOTA SOBRE LA REFERENCIA:
+se tomo como v1.5 el commit `85c8cb7` (30 de octubre de 2026), cuyo mensaje es
+"feat(styles): agregar media query para diseño responsivo". Este es
+el ultimo commit de evolucion importante de styles.css antes de la
+integracion de Bootstrap.
+
+1. LINEAS Y TIEMPO REGISTRADO
+------------------------------------------------------------
+
+| Version | Commit | Lineas de styles.css | Fecha del commit |
+|---------|--------|----------------------|------------------|
+| v1.5    | 85c8cb7 | 333                  | 2026-10-30 07:24 |
+| Actual  | 6acae64 | 230                  | 2026-11-02 12:05 |
+
+La version actual tiene 103 lineas menos que v1.5, lo que representa
+una reduccion aproximada del 30,9 %. Esta reduccion se relaciona
+principalmente con el traslado de la organizacion visual de
+reservas.html a las clases de Bootstrap.
+
+Git registra la hora de los commits, pero no el tiempo real trabajado.
+Por eso, el tiempo que se puede comprobar en el historial es tiempo
+calendario transcurrido:
+
+- Desarrollo hasta v1.5: desde el commit de la version 1.0
+  (2026-10-25 20:58) hasta v1.5: 4 dias, 10 horas y 26 minutos.
+- Evolucion desde v1.5 hasta la version actual:
+  2 dias, 4 horas y 40 minutos.
+- El tiempo real de trabajo de cada version: no queda registrado
+  de forma suficiente en Git y no debe presentarse como una medicion
+  exacta.
+
+2. VENTAJAS Y DESVENTAJAS OBSERVADAS
+------------------------------------------------------------
+
+| Aspecto | v1.5: CSS propio | Actual: CSS propio + Bootstrap |
+|---|---|---|
+| Control visual | Alto control sobre colores, espacios, tamaños, tarjetas y formularios. | Se conserva la identidad visual, pero algunas reglas dependen de Bootstrap. |
+| Responsive | Requirió media queries y ajustes manuales. | Bootstrap facilita la adaptación mediante `container`, `row`, `col-*` y utilidades. |
+| Cantidad de CSS | 333 líneas y más reglas específicas. | 230 líneas; se redujo código repetido para la estructura de páginas. |
+| Rapidez de desarrollo | Más lenta porque cada comportamiento se escribía manualmente. | Más rápida para grids, espaciado y distribución de formularios. |
+| Mantenimiento | Selectores propios fáciles de localizar, pero numerosos. | Menos CSS propio, aunque hay que revisar conflictos entre Bootstrap y `styles.css`. |
+
+Ventajas de v1.5:
+
+- Permitio definir con precision la apariencia y el comportamiento
+  responsive de cada componente.
+- El diseno dependia menos de clases externas.
+- Las dimensiones de las imagenes, tarjetas y espacios eran mas faciles
+  de controlar desde un solo archivo.
+
+Desventajas de v1.5:
+
+- Se necesitaba escribir y probar mas reglas CSS.
+- Los cambios responsive exigian media queries y ajustes manuales.
+- La estructura de formularios y tarjetas podia requerir mas tiempo.
+
+Ventajas de la version actual:
+
+- Bootstrap acelera la creacion de filas, columnas, gutters y espaciados.
+- Se redujo la cantidad de CSS que debe mantenerse manualmente.
+- La estructura de reservas se adapta mejor a distintos tamaños de pantalla.
+
+Desventajas de la version actual:
+
+- Pueden aparecer conflictos de especificidad entre Bootstrap y
+  styles.css, como `text-center` o `fw-semibold`.
+- Algunas decisiones visuales quedan condicionadas por las clases
+  disponibles en Bootstrap.
+- Para conservar una apariencia consistente se deben revisar ambas
+  fuentes de estilos.
+
+3. CONCLUSION
+------------------------------------------------------------
+
+La v1.5 ofrecio mayor control y personalizacion, pero requirio mas
+codigo y mas tiempo de ajuste. La version actual redujo styles.css de
+333 a 230 lineas y agilizo la construccion responsive de reservas
+gracias a Bootstrap. La mejor solucion fue combinar ambas estrategias:
+Bootstrap para la estructura repetitiva y el responsive, y CSS propio
+para la identidad visual.
