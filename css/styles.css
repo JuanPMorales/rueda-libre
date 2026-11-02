@@ -37,12 +37,6 @@ header {
     padding: var(--espaciado-grande);
 }
 
-#portada {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 main {
     max-width: 60rem;
     margin-inline: auto;
@@ -254,37 +248,6 @@ textarea {
     height: 12rem;
 }
 
-/* TARIFAS */
-/* Tablas de tarifas y recorridos */
-.tarifas {
-    display: block;
-    background-color: var(--crema);
-}
-
-.tarifas table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.tarifas h2 {
-    display: block;
-    margin-bottom: var(--espaciado-grande);
-    text-align: center;
-}
-
-.tarifas caption {
-    margin-bottom: var(--espaciado-grande);
-}
-
-.tarifas table {
-    width: 100%;
-    margin-bottom: var(--espaciado-grande);
-}
-
-.tarifas th,
-.tarifas td {
-    border: 1px solid var(--gris-asfalto);
-}
 
 /* GLOBAL */
 /* Botón flotante de WhatsApp */
@@ -338,11 +301,6 @@ textarea {
     
     .parejas div {
         flex: 1; 
-    }
-
-    /* TARIFAS */
-    .tarifas {
-        display: inline-block;
     }
 
     footer{
