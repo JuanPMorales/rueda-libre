@@ -242,44 +242,9 @@ textarea {
     border-radius: 5px;
     object-fit: cover;
 }
-
+.tarjetas img,
 .tarjetas-flota img{
     height: 12rem;
-}
-
-/* Nuestras rutas */
-
-.Nuestras-rutas{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--espaciado-mediano);
-}
-
-.Nuestras-rutas h2 {
-    grid-column: 1/ -1;
-    text-align: center;
-}
-
-.tarjetas {
-    display: flex;
-    flex-direction: column;
-    gap: var(--espaciado-pequeno);
-    padding: var(--espaciado-mediano);
-    border: 1px solid var(--azul-noche);
-    border-radius: 5px;
-}
-
-.tarjetas img{
-    display: block;
-    width: 100%;
-    height: 12rem;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
-.tarjetas a {
-    margin-top: auto;
-    align-self: center;
 }
 
 /* Tablas de tarifas */
