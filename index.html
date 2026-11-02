@@ -15,14 +15,23 @@
 </head>
 <body>
     <header>
-        <h1 class="titulo-principal">Rueda Libre</h1>
-        
-        <nav id="menu">
-            <ul>
-                <li><a class="activo" href="index.html">Inicio</a></li>
-                <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
-                <li><a href="paginas/reservas.html">Reservas</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg w-100">
+            <div class="container d-flex justify-content-between">
+                <a class="navbar-brand fw-bold" href="index.html">Rueda Libre</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto d-flex flex-wrap gap-3">
+                        <li class="nav-item"><a class="activo" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
+                        <li class="nav-item"><a href="paginas/reservas.html">Reservas</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </nav>
     </header>
     
@@ -255,7 +264,7 @@
                 Una vez validada tu información, recibirás un correo electrónico con las instrucciones para recogerla.</p>
 
             <p>
-                <a href="https://alquilarciclas.com">Alquilar tu cicla</a>
+                <a class="btn btn-success" href="https://alquilarciclas.com">Alquilar tu cicla</a>
             </p>
 
             <h3>Pasos para alquilar tu bicicleta</h3>

@@ -16,15 +16,23 @@
 <body>
 
     <header>
-        
-        <h1>Rueda Libre</h1>
-        
-        <nav id="menu">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../paginas/tarifas.html">Tarifas y rutas</a></li>
-                <li><a class="activo" href="../paginas/reservas.html">Reservas</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg w-100">
+            <div class="container d-flex justify-content-between">
+                <a class="navbar-brand fw-bold" href="../index.html">Rueda Libre</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto d-flex flex-wrap gap-3">
+                        <li class="nav-item"><a href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a href="tarifas.html">Tarifas y rutas</a></li>
+                        <li class="nav-item"><a class="activo" href="reservas.html">Reservas</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </nav>
     </header>
     
@@ -32,7 +40,7 @@
         <img class="d-block w-100 h-auto" src="../img/portada_Rueda_Libre.png" alt="Bicicletas y servicios de Rueda Libre">
         <section class="text-center m-3">
             <h2>Reserva tu bicicleta</h2>
-            <a href="mailto:hola@ruedalibre.example">Escribenos a nuestro correo</a>
+            <a class="btn btn-success btn-sm" href="mailto:hola@ruedalibre.example">Escribenos a nuestro correo</a>
         </section >
 
         <section class="container">
