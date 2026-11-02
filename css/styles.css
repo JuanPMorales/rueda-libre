@@ -168,11 +168,6 @@ textarea:focus {
 
 /* RESERVAS */
 /* Formulario de reservas */
-fieldset {
-    margin-bottom: var(--espaciado-grande);
-    padding: var(--espaciado-mediano);
-    border: 1px solid var(--gris-asfalto);
-}
 
 form label {
     display: block;
@@ -259,19 +254,6 @@ textarea {
     border-radius: 10px;
 }
 
-/* RESERVAS */
-/* Distribución del formulario de reservas */
-
-.formulario-informacion {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--espaciado-mediano);
-}
-
-.formulario-informacion h2 {
-    text-align: center;
-}
-
 /* GLOBAL */
 .horario-atencion {
     display: block;
@@ -283,24 +265,6 @@ textarea {
 @media (min-width: 768px) {
     header{
         justify-content: space-between;
-    }
-
-    /* RESERVAS */
-    .formulario-informacion{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: var(--espaciado-pequeno)
-    }
-
-    /* RESERVAS */
-    .parejas {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--espaciado-mediano);
-    }
-    
-    .parejas div {
-        flex: 1; 
     }
 
     footer{
