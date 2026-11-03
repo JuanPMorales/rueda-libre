@@ -50,6 +50,10 @@
                         <form class="needs-validation" novalidate>
                             <fieldset class="mb-4 p-3 border">
                                 <legend>Tus Datos</legend>
+                                <div class="alert aler-info" role="alert">
+                                    Presenta tu documento de identidad original al recoger la bicicleta.
+                                    <button type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                                </div>
                                 <div>
                                     <label class="form-label" for="nombreCompleto">Nombre Completo</label>
                                     <input class="form-control" type="text" id="nombreCompleto" name="NombreCompleto" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{3,}(?:\s+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,})+$" placeholder="Pepito Perez" minlength="3" required>
@@ -110,7 +114,7 @@
                                     <div class="invalid-feedback">Selecciona un plan: 1 hora, medio día o día completo.</div>
                                 </div>
                                 <div>
-                                    <label class="form-label"for="cantidadBicicletas">Cantidad de bicicletas</label>
+                                    <label class="form-label" for="cantidadBicicletas">Cantidad de bicicletas</label>
                                     <input class="form-control" type="number" name="numBicicletas" id="cantidadBicicletas" min="1" max="6" required>
                                     <div class="invalid-feedback">Escribe un número entero entre 1 y 6 para la cantidad de bicicletas.</div>
                                 </div>
