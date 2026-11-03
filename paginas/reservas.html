@@ -142,6 +142,7 @@
                                     <label class="form-label" for="terminosCondiciones">Terminos y Condiciones</label>
                                     <input class="form-check" type="checkbox" name="confiTerminosCondiciones" id="terminosCondiciones" required>
                                     <div class="invalid-feedback">Debes aceptar los términos y condiciones para poder enviar la reserva.</div>
+                                    <button class="btn btn-link mt-4" type="button" data-bs-toggle="modal" data-bs-target="#modalPoliticas">Ver políticas de alquiler</button>
                                 </div>
                             
                                 <div>
@@ -155,6 +156,28 @@
                                 <button class="boton-accion" type="submit">Enviar</button>
                             </div>
                         </form>
+                        <div class="modal fade" id="modalPoliticas" tabindex="-1" aria-labelledby="tituloPoliticas" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title fs-5" id="tituloPoliticas">Políticas de alquiler</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ol>
+                                            <li>Presenta tu documento de identidad original al recoger la bicicleta.</li>
+                                            <li>Revisa la bicicleta con el asesor antes de salir.</li>
+                                            <li>Cada 15 minutos de retraso en la devolución tienen un recargo de $5.000.</li>
+                                            <li>Los daños por mal uso se cobran según el costo de la reparación.</li>
+                                            <li>Los menores de edad deben estar acompañados por un adulto responsable.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                     <section class="col-12 col-md-6 horario-atencion">
                         <h2>Horario de atención</h2>
