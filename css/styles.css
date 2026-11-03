@@ -158,32 +158,6 @@ textarea:focus {
 /* RESERVAS */
 /* Formulario de reservas */
 
-form label {
-    display: block;
-    margin-bottom: var(--espaciado-pequeno);
-    color: var(--azul-noche);
-}
-
-select,
-input,
-textarea {
-    display: block;
-    box-sizing: border-box;
-    padding: var(--espaciado-mediano);
-    border-radius: 5px;
-    border: none;
-    width: 100%;
-}
-
-select {
-    margin-bottom: var(--espaciado-pequeno);
-}
-
-input[type="checkbox"] {
-    display: inline-block;
-    width: auto;
-}
-
 textarea {
     height: 10rem;
 }
