@@ -64,18 +64,22 @@
                                                 <option value="CC">Cédula</option>
                                                 <option value="TI">Tarjeta Identidad</option>
                                             </select>
-                                        <input class="form-control" type="number" id="numeroDocumento" name="numDocumento" minlength="6" required>
+                                            <div class="invalid-feedback">Selecciona tu tipo de documento (Cédula o Tarjeta de identidad).</div>
+                                            <input class="form-control" type="number" id="numeroDocumento" name="numDocumento" minlength="6" required>
+                                            <div class="invalid-feedback">Escribe tu número de documento solo con números, sin puntos ni espacios (mínimo 6 dígitos).</div>
                                     </section>
                                         
                                     <section class="col-12 col-md-6">
                                         <label class="form-label" for="celular">Celular</label>
                                         <input class="form-control" type="tel" id="celular" name="numCelular" pattern="^3[0-9]{9}" title="Escribe 10 numeros sin espacio y que comience en 3" required>
+                                        <div class="invalid-feedback">Escribe 10 números sin espacios y que empiecen por 3. Ejemplo: 3001234567.</div>
                                     </section>
                                 </section>
 
                                 <div>
                                     <label class="form-label" for="correo">Correo Electrónico</label>
                                     <input class="form-control" type="email" id="correo" name="correoElectronico" required>
+                                    <div class="invalid-feedback">Escribe un correo válido que incluya @ y un dominio. Ejemplo: nombre@correo.com.</div>
                                 </div>
                             </fieldset>
                             <fieldset class="mb-4 p-3 border">
@@ -83,6 +87,7 @@
                                 <div>
                                     <label class="form-label" for="fechaAlquiler">Fecha Alquiler</label>
                                     <input class="form-control" type="date" name="fechaAlquiler" id="fechaAlquiler" min="2026-10-01" max="2026-12-31" required>
+                                    <div class="invalid-feedback">Elige una fecha entre el 1 de octubre y el 31 de diciembre de 2026.</div>
                                 </div>
                                 <div>
                                     <label class="form-label" for="tipoBicicleta">Tipo Bicicletas</label>
@@ -92,6 +97,7 @@
                                         <option value="montaña">Montaña</option>
                                         <option value="electrica">Eléctrica</option>
                                     </select>
+                                    <div class="invalid-feedback">Selecciona el tipo de bicicleta que quieres alquilar.</div>
                                 </div>
                                 <div>
                                     <label class="form-label" for="tipoPlan">Plan</label>
@@ -101,10 +107,12 @@
                                         <option value="medioDia">Medio día</option>
                                         <option value="diaCompleto">Día completo</option>
                                     </select>
+                                    <div class="invalid-feedback">Selecciona un plan: 1 hora, medio día o día completo.</div>
                                 </div>
                                 <div>
                                     <label class="form-label"for="cantidadBicicletas">Cantidad de bicicletas</label>
-                                    <input class="form-control" type="number" name="numBicicletas" id="cantidadBicicletas" min="1" max="6">
+                                    <input class="form-control" type="number" name="numBicicletas" id="cantidadBicicletas" min="1" max="6" required>
+                                    <div class="invalid-feedback">Escribe un número entero entre 1 y 6 para la cantidad de bicicletas.</div>
                                 </div>
                                 <div>
                                     <label class="form-label" for="recorrdoGuiado">Recorrido Guiados</label>
@@ -115,6 +123,7 @@
                                         <option value="Sabores de Barrio">Sabores de Barrio</option>
                                         <option value="Reto Las Palmas">Reto Las Palmas</option>
                                     </select>
+                                    <div class="invalid-feedback">Selecciona un recorrido o elige "Ninguna" si no quieres uno.</div>
                                 </div>
                             </fieldset>
                             <fieldset class="mb-4 p-3 border">
@@ -122,16 +131,19 @@
                                 <div>
                                     <label class="form-label" for="confDatos">¿Confirmas tus datos?</label>
                                     <input class="form-check" type="checkbox" name="confDatos" id="confDatos" required>
+                                    <div class="invalid-feedback">Marca esta casilla para confirmar que tus datos son correctos.</div>
                                 </div>
                             
                                 <div>
                                     <label class="form-label" for="terminosCondiciones">Terminos y Condiciones</label>
                                     <input class="form-check" type="checkbox" name="confiTerminosCondiciones" id="terminosCondiciones" required>
+                                    <div class="invalid-feedback">Debes aceptar los términos y condiciones para poder enviar la reserva.</div>
                                 </div>
                             
                                 <div>
                                     <label class="form-label" for="sectComentarios">Comentarios</label>
                                     <textarea class="form-control" name="comentario" id="sectComentarios" placeholder="¿Algun comentario?" maxlength="300"></textarea>
+                                    
                                 </div>
                             </fieldset>
                         
