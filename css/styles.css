@@ -47,6 +47,10 @@ main p {
     margin-bottom: var(--espaciado-mediano);
 }
 
+.carrusel-promos {
+    height: 15rem;
+}
+
 /* INDEX */
 /* Elementos propios de la página de inicio */
 
