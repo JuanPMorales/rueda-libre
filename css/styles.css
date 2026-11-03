@@ -15,26 +15,58 @@
     --espaciado-pequeno: 0.5rem;
     --espaciado-mediano: 1rem;
     --espaciado-grande: 1.5rem;
+
+    --bs-primary: var(--verde-ruta);
+    --bs-primary-rgb: 30, 122, 79;
+
+    --bs-body-font-family: var(--textos);
+    --bs-body-color: var(--gris-asfalto);
+    --bs-body-color-rgb: 91, 100, 112;
+    --bs-body-bg: var(--crema);
+    --bs-body-bg-rgb: 250, 246, 239;
+    --bs-heading-color: var(--azul-noche);
+
+    --bs-link-color: var(--verde-ruta);
+    --bs-link-color-rgb: 30, 122, 79;
+    --bs-link-hover-color: #1A6843;
+    --bs-link-hover-color-rgb: 26, 104, 67;
+
+    --bs-border-radius: 0.5rem;
 }
 
-* {
-    box-sizing: border-box;
+
+/* Botón principal: Verde Ruta */
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--verde-ruta);
+    --bs-btn-border-color: var(--verde-ruta);
+    --bs-btn-hover-color: var(--azul-noche);
+    --bs-btn-hover-bg: var(--naranja-pedal);
+    --bs-btn-hover-border-color: var(--azul-noche);
+    --bs-btn-focus-shadow-rgb: 30, 122, 79;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #175C3B;
+    --bs-btn-active-border-color: var(--naranja-pedal);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--verde-ruta);
+    --bs-btn-disabled-border-color: var(--verde-ruta);
 }
 
-body {
-    margin: 0;
-    font-family: var(--textos);
-    background-color: var(--crema);
-    color: var(--gris-asfalto);
-}
 
-/* Estructura compartida */
-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--espaciado-mediano);
-    padding: var(--espaciado-grande);
+.btn-naranja {
+    --bs-btn-color: var(--azul-noche);
+    --bs-btn-bg: var(--naranja-pedal);
+    --bs-btn-border-color: var(--naranja-pedal);
+    --bs-btn-hover-color: var(--azul-noche);
+    --bs-btn-hover-bg: #E08A1C;
+    --bs-btn-hover-border-color: #D4821A;
+    --bs-btn-focus-shadow-rgb: 243, 154, 43;
+    --bs-btn-active-color: var(--azul-noche);
+    --bs-btn-active-bg: #C47713;
+    --bs-btn-active-border-color: #B86F11;
+    --bs-btn-disabled-color: var(--azul-noche);
+    --bs-btn-disabled-bg: var(--naranja-pedal);
+    --bs-btn-disabled-border-color: var(--naranja-pedal);
 }
 
 main {
@@ -91,12 +123,10 @@ h5,
 h6 {
     text-align: center;
     font-family: var(--titulos);
-    color: var(--azul-noche);
     font-weight: 700;
 }
 
 a {
-    color: var(--verde-ruta);
     text-decoration: none;
 }
 
@@ -122,22 +152,11 @@ a {
 
 /* GLOBAL */
 /* Botones y estados interactivos */
-.boton-accion,
 .WhatsApp {
     background-color: var(--verde-ruta);
     color: var(--crema);
     font-weight: 600;
 }
-
-.boton-accion {
-    display: inline-block;
-    margin: var(--espaciado-pequeno);
-    padding: var(--espaciado-pequeno) var(--espaciado-mediano);
-    border-radius: 5px;
-}
-
-.boton-accion:hover,
-.boton-accion:focus,
 .WhatsApp:hover,
 .WhatsApp:focus {
     background-color: var(--naranja-pedal);
@@ -146,7 +165,6 @@ a {
 
 .tarjetas a:focus,
 .tarjetas-flota a:focus,
-.boton-accion:focus,
 .WhatsApp:focus,
 #menu a:focus,
 input:focus,
