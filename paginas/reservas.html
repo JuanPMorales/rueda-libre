@@ -47,45 +47,46 @@
             <section class="row g-3">
                     <section class="col-12 col-md-6">
                         <h2>Formulario De Reserva</h2>
-                        <form action="#" method="post">
+                        <form class="needs-validation" novalidate>
                             <fieldset class="mb-4 p-3 border">
                                 <legend>Tus Datos</legend>
                                 <div>
-                                    <label for="nombreCompleto">Nombre Completo</label>
-                                    <input type="text" id="nombreCompleto" name="NombreCompleto" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{3,}(?:\s+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,})+$" title="Por favor, introduce tu nombre y al menos un apellido (solo letras y espacios)." placeholder="Pepito Perez" minlength="3" required>
+                                    <label class="form-label" for="nombreCompleto">Nombre Completo</label>
+                                    <input class="form-control" type="text" id="nombreCompleto" name="NombreCompleto" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{3,}(?:\s+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,})+$" placeholder="Pepito Perez" minlength="3" required>
+                                    <div class="invalid-feedback">Por favor, introduce tu nombre y al menos un apellido (solo letras y espacios).</div>
                                 </div>
 
                                 <section class="row g-3 mt-2">
                                     <section class="col-12 col-md-6">
-                                        <label for="numeroDocumento">Numero Documento</label>
-                                            <select name="tipDocumento" id="tipDocumento" required>
+                                        <label class="form-label" for="numeroDocumento">Numero Documento</label>
+                                            <select class="form-select" name="tipDocumento" id="tipDocumento" required>
                                                 <option value="" disabled selected>Selecciona el documento</option>
                                                 <option value="CC">Cédula</option>
                                                 <option value="TI">Tarjeta Identidad</option>
                                             </select>
-                                        <input type="number" id="numeroDocumento" name="numDocumento" minlength="6" required>
+                                        <input class="form-control" type="number" id="numeroDocumento" name="numDocumento" minlength="6" required>
                                     </section>
                                         
                                     <section class="col-12 col-md-6">
-                                        <label for="celular">Celular</label>
-                                        <input type="tel" id="celular" name="numCelular" pattern="^3[0-9]{9}" title="Escribe 10 numeros sin espacio y que comience en 3" required>
+                                        <label class="form-label" for="celular">Celular</label>
+                                        <input class="form-control" type="tel" id="celular" name="numCelular" pattern="^3[0-9]{9}" title="Escribe 10 numeros sin espacio y que comience en 3" required>
                                     </section>
                                 </section>
 
                                 <div>
-                                    <label for="correo">Correo Electrónico</label>
-                                    <input type="email" id="correo" name="correoElectronico" required>
+                                    <label class="form-label" for="correo">Correo Electrónico</label>
+                                    <input class="form-control" type="email" id="correo" name="correoElectronico" required>
                                 </div>
                             </fieldset>
                             <fieldset class="mb-4 p-3 border">
                                 <legend>Tu alquiler</legend>
                                 <div>
-                                    <label for="fechaAlquiler">Fecha Alquiler</label>
-                                    <input type="date" name="fechaAlquiler" id="fechaAlquiler" min="2026-10-01" max="2026-12-31" required>
+                                    <label class="form-label" for="fechaAlquiler">Fecha Alquiler</label>
+                                    <input class="form-control" type="date" name="fechaAlquiler" id="fechaAlquiler" min="2026-10-01" max="2026-12-31" required>
                                 </div>
                                 <div>
-                                    <label for="tipoBicicleta">Tipo Bicicletas</label>
-                                    <select name="bicicletas" id="tipoBicicleta" required>
+                                    <label class="form-label" for="tipoBicicleta">Tipo Bicicletas</label>
+                                    <select class="form-select" name="bicicletas" id="tipoBicicleta" required>
                                         <option value="" disabled selected>Selecciona tu bicicletas</option>
                                         <option value="urbana">Urbana</option>
                                         <option value="montaña">Montaña</option>
@@ -93,8 +94,8 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="tipoPlan">Plan</label>
-                                    <select name="planes" id="tipoPlan" required>
+                                    <label class="form-label" for="tipoPlan">Plan</label>
+                                    <select class="form-select" name="planes" id="tipoPlan" required>
                                         <option value="" disabled selected>Selecciona tu plan</option>
                                         <option value="hora">1 Hora</option>
                                         <option value="medioDia">Medio día</option>
@@ -102,12 +103,12 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="cantidadBicicletas">Cantidad de bicicletas</label>
-                                    <input type="number" name="numBicicletas" id="cantidadBicicletas" min="1" max="6">
+                                    <label class="form-label"for="cantidadBicicletas">Cantidad de bicicletas</label>
+                                    <input class="form-control" type="number" name="numBicicletas" id="cantidadBicicletas" min="1" max="6">
                                 </div>
                                 <div>
-                                    <label for="recorrdoGuiado">Recorrido Guiados</label>
-                                    <select name="recorridos" id="recorrdoGuiado" required>
+                                    <label class="form-label" for="recorrdoGuiado">Recorrido Guiados</label>
+                                    <select class="form-select" name="recorridos" id="recorrdoGuiado" required>
                                         <option value="" disabled selected>Selecciona tu recorrdo</option>
                                         <option value="ninguna">Ninguna</option>
                                         <option value="rioParques">Río y Parques</option>
@@ -119,18 +120,18 @@
                             <fieldset class="mb-4 p-3 border">
                                 <legend>confirmación</legend>
                                 <div>
-                                    <label for="confDatos">¿Confirmas tus datos?</label>
-                                    <input type="checkbox" name="confDatos" id="confDatos" required>
+                                    <label class="form-label" for="confDatos">¿Confirmas tus datos?</label>
+                                    <input class="form-check" type="checkbox" name="confDatos" id="confDatos" required>
                                 </div>
                             
                                 <div>
-                                    <label for="terminosCondiciones">Terminos y Condiciones</label>
-                                    <input type="checkbox" name="confiTerminosCondiciones" id="terminosCondiciones" required>
+                                    <label class="form-label" for="terminosCondiciones">Terminos y Condiciones</label>
+                                    <input class="form-check" type="checkbox" name="confiTerminosCondiciones" id="terminosCondiciones" required>
                                 </div>
                             
                                 <div>
-                                    <label for="sectComentarios">Comentarios</label>
-                                    <textarea name="comentario" id="sectComentarios" placeholder="¿Algun comentario?" maxlength="300"></textarea>
+                                    <label class="form-label" for="sectComentarios">Comentarios</label>
+                                    <textarea class="form-control" name="comentario" id="sectComentarios" placeholder="¿Algun comentario?" maxlength="300"></textarea>
                                 </div>
                             </fieldset>
                         
@@ -176,5 +177,6 @@
         <p>Copyright © 2026</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./reservas.js"></script>
 </body>
 </html>
