@@ -678,3 +678,37 @@ codigo y mas tiempo de ajuste. La version actual redujo styles.css de
 gracias a Bootstrap. La mejor solucion fue combinar ambas estrategias:
 Bootstrap para la estructura repetitiva y el responsive, y CSS propio
 para la identidad visual.
+
+----------------------------------
+
+BITACORA: CONSTRUCCION DE UN BOTON CON BOOTSTRAP Y TAILWIND
+
+En la semana 2 construi el boton utilizando Bootstrap. Para hacerlo
+agregue la clase `btn` al elemento `<button>` y despues use una clase
+como `btn-primary` para definir el estilo principal. Bootstrap ya
+incluia los colores, el espaciado, los bordes, el tamano de la letra y
+los estados del boton, por lo que fue posible obtener un resultado
+funcional escribiendo pocas clases:
+
+```html
+<button class="btn btn-primary">Reservar ahora</button>
+```
+
+Hoy construi el boton con Tailwind. En lugar de usar un componente
+predefinido, agregue varias clases utility-first para indicar
+directamente cada parte del diseno: color de fondo, color del texto,
+espaciado horizontal y vertical, bordes redondeados y el cambio de
+color al pasar el cursor:
+
+```html
+<button
+  class="rounded bg-orange-500 px-4 py-2 text-white hover:bg-orange-600">
+  Reservar ahora
+</button>
+```
+
+Una diferencia clave es que Bootstrap es un framework orientado a
+componentes y ofrece estilos preconstruidos, mientras que Tailwind es
+utility-first y permite construir el componente combinando clases
+pequenas y especificas.
+
